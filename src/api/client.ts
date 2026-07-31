@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: "http://localhost:3198/api",
 });
 
 // attach the session token to every outgoing request, if we have one
