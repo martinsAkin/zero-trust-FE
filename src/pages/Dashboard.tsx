@@ -83,11 +83,14 @@ export default function Dashboard() {
         <section>
           <h3>Staff actions</h3>
           <p className="subtitle">
-            To edit a student's exam score, open the record edit page directly with the
-            record ID (kept simple for this prototype). Editing requires re-entering your
-            password even though you are already logged in.
+            Editing a score, or creating a new record, both require your role to be staff
+            (Access Control Layer). Editing an existing score additionally requires
+            re-entering your password before it is applied.
           </p>
-          <Link to="/edit-record" className="button-link">Edit a record</Link>
+          <div style={{ display: "flex", gap: 12 }}>
+            <Link to="/records" className="button-link">View all records</Link>
+            <Link to="/create-record" className="button-link">Create a record</Link>
+          </div>
         </section>
       )}
     </div>

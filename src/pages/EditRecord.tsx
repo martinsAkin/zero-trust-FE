@@ -1,8 +1,10 @@
 import { useState, FormEvent } from "react";
+import { useSearchParams, Link } from "react-router-dom";
 import api from "../api/client";
 
 export default function EditRecord() {
-  const [recordId, setRecordId] = useState("");
+  const [searchParams] = useSearchParams();
+  const [recordId, setRecordId] = useState(searchParams.get("recordId") || "");
   const [examScore, setExamScore] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -69,6 +71,10 @@ export default function EditRecord() {
           {loading ? "Confirming..." : "Confirm and save"}
         </button>
       </form>
+
+      <p style={{ marginTop: 12 }}>
+        <Link to="/records">Back to all records</Link>
+      </p>
     </div>
   );
 }

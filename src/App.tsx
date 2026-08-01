@@ -6,6 +6,8 @@ import VerifyOtp from "./pages/VerifyOtp";
 import Dashboard from "./pages/Dashboard";
 import EditRecord from "./pages/EditRecord";
 import AuditLog from "./pages/AuditLog";
+import StaffRecords from "./pages/StaffRecords";
+import CreateRecord from "./pages/CreateRecord";
 
 export default function App() {
   return (
@@ -28,6 +30,22 @@ export default function App() {
             element={
               <ProtectedRoute staffOnly>
                 <EditRecord />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/records"
+            element={
+              <ProtectedRoute staffOnly>
+                <StaffRecords />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/create-record"
+            element={
+              <ProtectedRoute staffOnly>
+                <CreateRecord />
               </ProtectedRoute>
             }
           />
