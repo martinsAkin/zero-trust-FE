@@ -20,41 +20,41 @@ export default function App() {
           <Route
             path="/dashboard"
             element={
-              // <ProtectedRoute>
+              <ProtectedRoute>
                 <Dashboard />
-              // </ProtectedRoute>
+              </ProtectedRoute>
             }
           />
           <Route
             path="/edit-record"
             element={
-              // <ProtectedRoute staffOnly>
+              <ProtectedRoute staffOnly>
                 <EditRecord />
-              // </ProtectedRoute>
+              </ProtectedRoute>
             }
           />
           <Route
             path="/records"
             element={
-              // <ProtectedRoute staffOnly>
+              <ProtectedRoute staffOnly>
                 <StaffRecords />
-              // </ProtectedRoute>
+              </ProtectedRoute>
             }
           />
           <Route
             path="/create-record"
             element={
-              // <ProtectedRoute staffOnly>
+              <ProtectedRoute staffOnly>
                 <CreateRecord />
-              // </ProtectedRoute>
+              </ProtectedRoute>
             }
           />
           <Route
             path="/audit-log"
             element={
-              // <ProtectedRoute staffOnly>
+              <ProtectedRoute staffOnly>
                 <AuditLog />
-              // </ProtectedRoute>
+              </ProtectedRoute>
             }
           />
         </Routes>
